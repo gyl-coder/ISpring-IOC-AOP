@@ -1,5 +1,7 @@
 package com.yanliang.servlet;
 
+import com.yanliang.factory.BeanFactory;
+import com.yanliang.factory.ProxyFactory;
 import com.yanliang.pojo.Result;
 import com.yanliang.service.TransferService;
 import com.yanliang.service.impl.TransferServiceImpl;
@@ -15,8 +17,14 @@ import java.io.IOException;
 @WebServlet(name="transferServlet",urlPatterns = "/transferServlet")
 public class TransferServlet extends HttpServlet {
 
-    // 1. 实例化service层对象
-    private TransferService transferService = new TransferServiceImpl();
+//    // 1. 实例化service层对象
+//    private TransferService transferService = new TransferServiceImpl();
+    // 改造为通过Bean工程获取service层对象
+//    private TransferService transferService = (TransferService) BeanFactory.getBean("transferService");
+
+    // 从工程获取委托对象（委托对象增强了事务控制的功能）
+    private ProxyFactory proxyFactory = (ProxyFactory) BeanFactory.getBean("proxyFactory");
+    private TransferService transferService = (TransferService) proxyFactory.getJdkProxy(BeanFactory.getBean("transferService")) ;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

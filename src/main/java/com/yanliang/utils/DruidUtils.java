@@ -12,9 +12,9 @@ public class DruidUtils {
 
     static {
         druidDataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        druidDataSource.setUrl("jdbc:mysql://10.16.18.44:3306/yanliang");
+        druidDataSource.setUrl("jdbc:mysql://localhost:3306/bank");
         druidDataSource.setUsername("root");
-        druidDataSource.setPassword("iquantex");
+        druidDataSource.setPassword("123456");
 
     }
 
