@@ -6,7 +6,7 @@ com\yanliang\utils\DruidUtils.class
 com\yanliang\pojo\Result.class
 com\yanliang\factory\ProxyFactory$1.class
 com\yanliang\factory\ProxyFactory$2.class
-com\yanliang\factory\BeanFactory.class
+com\yanliang\factory\CreateBeanFactory.class
 com\yanliang\factory\ProxyFactory.class
 com\yanliang\service\TransferService.class
 com\yanliang\dao\impl\JdbcAccountDaoImpl.class
