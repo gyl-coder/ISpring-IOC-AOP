@@ -1,8 +1,6 @@
 package com.yanliang.service.impl;
 
 import com.yanliang.dao.AccountDao;
-import com.yanliang.dao.impl.JdbcAccountDaoImpl;
-import com.yanliang.factory.BeanFactory;
 import com.yanliang.pojo.Account;
 import com.yanliang.service.TransferService;
 

@@ -20,6 +20,18 @@
     </properties>
 
     <dependencies>
+        <!--spring web 功能-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.1.12.RELEASE</version>
+        </dependency>
+        <!--spring IOC 容器功能-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.1.12.RELEASE</version>
+        </dependency>
         <!-- 单元测试Junit -->
         <dependency>
             <groupId>junit</groupId>
